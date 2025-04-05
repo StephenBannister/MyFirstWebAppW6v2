@@ -5,8 +5,8 @@
 // Added menu highlight for the current page, but had to nest the load delay function for .nav-link
 // Added aria-current attribute to the menu for the current page for accessibility
 $(document).ready(function () {
-    $('#header').load('/header.html');
-    $('#menu').load('/menu.html', function() {
+    $('#header').load('header.html');
+    $('#menu').load('menu.html', function() {
         $('.nav-link').each(function () {
             if (this.href === window.location.href) {
               $(this).addClass('active');
@@ -14,7 +14,7 @@ $(document).ready(function () {
             }
           });
     });
-    $('#footer').load('/footer.html');
+    $('#footer').load('footer.html');
 });
 
 
